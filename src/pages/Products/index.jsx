@@ -10,8 +10,7 @@ import { generatePublicUrl } from '../../../urlConfig';
 
 export default function Products() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isProductDeailsModalOpen, setIsProductDeailsModalOpen] =
-    useState(false);
+  const [isProductDeailsModalOpen, setIsProductDeailsModalOpen] = useState(false);
 
   const [productName, setproductName] = useState('');
   const [productQuantity, setProductQuantity] = useState('');
@@ -183,7 +182,7 @@ export default function Products() {
           <div className="pictureProductContainer">
             {productDetails.Pictures.map((picture, index) => (
               <div className="pictureProductContent" key={index}>
-                <img src={picture.img} alt="" />
+                <img src={generatePublicUrl(picture.img)} alt="" />
               </div>
             ))}
           </div>
